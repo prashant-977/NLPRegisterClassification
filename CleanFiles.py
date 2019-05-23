@@ -16,9 +16,10 @@ for file in files:
         clean_file =p.sub('', text)
 
         
-        file.seek(0)
-        file.write('__label__'+folder +' ' +clean_file.replace('\n', ' ').lstrip())
-        file.truncate()
+        if not text.startswith('__label__'):
+            file.seek(0)
+            file.write('__label__'+folder +' ' +clean_file.replace('\n', ' ').lstrip())
+            file.truncate()
         
 if __name__ == '__main__':
     file_process() 
