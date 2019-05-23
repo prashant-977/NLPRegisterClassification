@@ -19,3 +19,8 @@ for file in files:
         file.seek(0)
         file.write('__label__'+folder +' ' +clean_file.replace('\n', ' ').lstrip())
         file.truncate()
+        
+if __name__ == '__main__':
+    file_process() 
+            
+    print('.......Done.........')
