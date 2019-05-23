@@ -14,9 +14,8 @@ for file in files:
         text=file.read()
         p = re.compile(r'<.*?>')
         clean_file =p.sub('', text)
-#         var=re.sub('<.*?>', '', f.read())
-#         va='__label__'+folder +'\n' +var.lstrip()
+
         
         file.seek(0)
-        file.write('__label__'+folder +'\n' +clean_file.lstrip())
+        file.write('__label__'+folder +' ' +clean_file.replace('\n', ' '))
         file.truncate()
