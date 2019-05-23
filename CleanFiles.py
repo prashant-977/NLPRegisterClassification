@@ -17,5 +17,5 @@ for file in files:
 
         
         file.seek(0)
-        file.write('__label__'+folder +' ' +clean_file.replace('\n', ' '))
+        file.write('__label__'+folder +' ' +clean_file.replace('\n', ' ').lstrip())
         file.truncate()
