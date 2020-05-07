@@ -1,0 +1,9 @@
+bs4
+re
+pandas
+numpy
+wordcloud
+PIL
+textblob
+gensim
+sklearn
