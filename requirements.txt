@@ -1,7 +1,0 @@
-bs4
-pandas
-numpy
-wordcloud
-textblob
-gensim
-sklearn
