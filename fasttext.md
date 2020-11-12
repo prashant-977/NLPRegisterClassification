@@ -29,7 +29,24 @@ R@1     0.211
 perl -MList::Util -e 'print List::Util::shuffle <>' data/core.preprocessed6.txt > data/core.preprocessed7.txt
 
  ```
+ ## Modeling with Processed data:
+  ```bash
+ pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext supervised -input ../data/core.processed.train -output model_processed
+Read 21M words
+Number of words:  266229
+Number of labels: 26
+Progress: 100.0% words/sec/thread:  755646 lr:  0.000000 avg.loss:  2.058319 ETA:   0h 0m 0s
+ ```
+ ## Testing the accuracy of the model: 
+   ```bash
+ pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext test model_processed.bin ../data/core.processed2.test
+N       2212
+P@1     0.457
+R@1     0.457
+
  ## This is how we do autotune validation:
+   ```
+   
 ```bash
 
 pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext supervised -input ../train_file_processed.txt -output model -autotune-validation ../core-test.valid
