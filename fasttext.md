@@ -44,8 +44,17 @@ N       2212
 P@1     0.457
 R@1     0.457
 
-
    ```
+   
+  With Only epoch of 25, we get following:
+  
+ ```bash
+  pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext test model_processed.bin ../data/core.processed2.test
+N       2212
+P@1     0.664
+R@1     0.664
+  ```
+  
  ## This is how we do autotune validation:  
 ```bash 
 
