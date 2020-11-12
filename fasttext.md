@@ -21,8 +21,17 @@ N       2486
 P@1     0.422
 R@1     0.211
  ```
-## This is how we do autotune validation:
+## Preprocessing in FastText:
+ ```bash
+ cat data/core.preprocessed.txt | tr '[:upper:]' '[:lower:]' | sed -e "s/'/ ' /g" -e 's/"//g' -e 's/\./ \. /g' -e 's/<br \/>/ /g' -e 's/,/ , /g' -e 's/(/ ( /g' -e 's/)/ ) /g' -e 's/\!/ \! /g' -e 's/\?/ \? /g' -e 's/\;/ /g' -e 's/\:/ /g' |  sed 's/\,//g' | sed 's/\.//g' > data/core.preprocessed6.txt
+ 
+ Shuffling dataset:
+perl -MList::Util -e 'print List::Util::shuffle <>' data/core.preprocessed6.txt > data/core.preprocessed7.txt
+
+ ```
+ ## This is how we do autotune validation:
 ```bash
+
 pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext supervised -input ../train_file_processed.txt -output model -autotune-validation ../core-test.valid
 ```
 
