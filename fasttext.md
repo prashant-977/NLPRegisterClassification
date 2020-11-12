@@ -14,8 +14,13 @@ pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ head -n 17
 ```bash
  ./fasttext predict model_core.bin -
  ```
- Tried a few labels from the devset data
- 
+ Tried a few labels from the devset data. Using our devset data, we get following result:
+ ```bash
+ ./fasttext test model_core.bin ../core.valid
+N       2486
+P@1     0.422
+R@1     0.211
+ ```
 ## This is how we do autotune validation:
 ```bash
 pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext supervised -input ../train_file_processed.txt -output model -autotune-validation ../core-test.valid
