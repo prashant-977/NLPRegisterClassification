@@ -14,7 +14,7 @@ pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ head -n 17
 ```bash
  ./fasttext predict model_core.bin -
  ```
- Tried a few labels from the devset
+ Tried a few labels from the devset data
  
 ## This is how we do autotune validation:
 ```bash
