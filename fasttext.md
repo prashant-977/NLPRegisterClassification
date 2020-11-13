@@ -67,6 +67,13 @@ P@1     0.691
 R@1     0.691
 
 ```
+With learning rate 1, epoch 25 and wordNgram of 2:
+```bash
+N       2212
+P@1     0.697
+R@1     0.697
+
+```
   
  ## This is how we do autotune validation:  
 ```bash 
