@@ -54,6 +54,19 @@ N       2212
 P@1     0.664
 R@1     0.664
   ```
+ And with learning rate of 1.0:
+```bash
+N       2212
+P@1     0.688
+R@1     0.688
+```
+With a learning rate of 1 and epoch 25:
+```bash
+N       2212
+P@1     0.691
+R@1     0.691
+
+```
   
  ## This is how we do autotune validation:  
 ```bash 
