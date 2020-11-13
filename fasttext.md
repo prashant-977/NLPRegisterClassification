@@ -96,3 +96,11 @@ pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext
 ```bash
 ./fasttext test model.bin ../core-test.valid
 ```
+
+Following was the result: 
+```bash
+N       2212
+P@1     0.646
+R@1     0.646
+
+```
