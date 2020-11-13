@@ -74,7 +74,7 @@ P@1     0.697
 R@1     0.697
 
 ```
-  
+  There is no much difference when wordNgram used is 3.
  ## This is how we do autotune validation:  
 ```bash 
 
