@@ -74,6 +74,16 @@ P@1     0.697
 R@1     0.697
 
 ```
+## This is how Hierarchical softmax was carried out:
+```bash
+ ./fasttext supervised -input ../data/core.processed.train -output model_processed -lr 1.0 -epoch 25 -wordNgrams 2 -bucket 200000 -dim 50 -loss hs
+```
+The accuracy was little less though:
+```bash
+./fasttext test model_processed.bin ../data/core.processed2.test                          N       2212
+P@1     0.634
+R@1     0.634
+```
   There is no much difference when wordNgram used is 3.
  ## This is how we do autotune validation:  
 ```bash 
