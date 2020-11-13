@@ -89,12 +89,12 @@ R@1     0.634
 ```bash 
 
 
-pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext supervised -input ../train_file_processed.txt -output model -autotune-validation ../core-test.valid
+pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext supervised -input ../data/core.processed.train -output model_core -autotune-validation ../data/core.processed2.test
 ```
 
 ## This is how to test on the model 
 ```bash
-./fasttext test model.bin ../core-test.valid
+./fasttext test model_core.bin ../data/core.processed2.test
 ```
 
 Following was the result: 
