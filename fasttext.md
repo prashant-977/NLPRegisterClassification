@@ -88,13 +88,18 @@ R@1     0.634
  ## This is how we do autotune validation:  
 ```bash 
 
-
 pramah@biarc:~/CORE_registers_correct_classes/single_labels/fastText$ ./fasttext supervised -input ../data/core.processed.train -output model_core -autotune-validation ../data/core.processed2.test
 ```
 
 ## This is how to test on the model 
 ```bash
 ./fasttext test model_core.bin ../data/core.processed2.test
+
+Progress: 100.0% Trials:    5 Best score:  0.647830 ETA:   0h 0m 0s
+Training again with best arguments
+Read 21M words
+Number of words:  266229
+Number of labels: 26
 ```
 
 Following was the result: 
